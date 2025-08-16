@@ -1,11 +1,9 @@
-// Alert on page load
 window.onload = function () {
     alert("Welcome to the Skills Test!");
     updateStudentCount();
     loadStoredData();
 };
 
-// Form validation
 document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault();
     let name = document.getElementById("name").value.trim();
@@ -26,23 +24,23 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     }
 });
 
-// Theme toggle
+
 document.getElementById("themeBtn").addEventListener("click", function () {
     document.body.classList.toggle("dark-mode");
 });
 
-// Student counter
+
 function updateStudentCount() {
     let rows = document.querySelectorAll("#studentTable tbody tr").length;
     document.getElementById("studentCount").textContent = rows;
 }
 
-// Add student dynamically
+
 document.getElementById("addStudentForm").addEventListener("submit", function (e) {
     e.preventDefault();
-    let name = document.getElementById("Name").value.trim();
-    let age = document.getElementById("Age").value.trim();
-    let skill = document.getElementById("Skill").value.trim();
+    let name = document.getElementById("studentName").value.trim();
+    let age = document.getElementById("studentAge").value.trim();
+    let skill = document.getElementById("studentSkill").value.trim();
 
     if (name && age && skill) {
         let table = document.querySelector("#studentTable tbody");
