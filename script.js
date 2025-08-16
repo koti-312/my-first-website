@@ -58,11 +58,12 @@ function loadStoredData() {
     let data = localStorage.getItem("formData");
     if (data) {
         let parsed = JSON.parse(data);
-        document.getElementById("storedOutput").innerHTML = `
+        document.getElementById("storedOutput").innerHTML =  `
             <p><strong>Name:</strong> ${parsed.name}</p>
             <p><strong>Email:</strong> ${parsed.email}</p>
             <p><strong>Message:</strong> ${parsed.message}</p>
-        `;
+         `;
+
     }
 }
 

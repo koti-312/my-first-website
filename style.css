@@ -28,6 +28,8 @@ th,td {
 
 }
 
+
+
 form {
     width: 80%;
     margin: 20px auto;
@@ -45,15 +47,13 @@ form input, form textarea, form button {
 
 }
 
-/* Responsive */
+
 @media (max-width: 600px) {
     header nav {
         display: flex;
         flex-direction: column;
     }
 }
-
-
 
 .dark-mode {
     background: black;
